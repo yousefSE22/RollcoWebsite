@@ -20,3 +20,24 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
     })
   })
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('.section')
+
+  const options = {
+    threshold: 0.1 // 10% of the section needs to be visible
+  }
+
+  const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+        observer.unobserve(entry.target) // Stop observing once the animation has run
+      }
+    })
+  }, options)
+
+  sections.forEach(section => {
+    observer.observe(section)
+  })
+})
