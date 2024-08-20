@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background: #333;
+  background: darkblue;
   color: #fff;
   padding: 10px 0;
   position: fixed;
@@ -31,9 +31,9 @@ nav {
   margin: auto;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.logo img {
+  height: 70px; /* Set the logo height to an appropriate size */
+  width: auto;  
 }
 
 .nav-links {
@@ -67,7 +67,10 @@ nav {
 
 .hero-section {
   height: 100vh;
-  background: url('https://source.unsplash.com/1600x900/?nature') center/cover no-repeat;
+  background-image: url('/factory1GIF.gif');
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image in the section */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,13 +78,16 @@ nav {
 }
 
 .hero-content h1 {
-  color: #fff;
+  color: whitesmoke;
+  text-shadow: 1px 1px darkblue; 
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  color: #fff;
+  color: #000000;
+  color: whitesmoke;
+  text-shadow: 1px 1px darkblue; 
   font-size: 1.25rem;
   margin-bottom: 40px;
 }
@@ -101,7 +107,7 @@ nav {
   background: #d64118;
 }
 
-.services-section, .about-section, .contact-section {
+.services-section, .about-section, .contact-section, .environemnt-section {
   padding: 80px 20px;
   text-align: center;
 }
@@ -125,10 +131,29 @@ nav {
   transform: scale(1.05);
 }
 
-.about-section p, .contact-section p {
+
+
+.about-section p, .contact-section p, .environemnt-section p{
   max-width: 600px;
   margin: 20px auto;
   line-height: 1.6;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.about-section {
+  justify-content: left;
+  display: grid;
+  background-color: whitesmoke;
+  
+
+}
+
+.environemnt-section{
+  justify-content: right;
+  display: grid;
+  background-color: whitesmoke;
+  
 }
 
 footer {
