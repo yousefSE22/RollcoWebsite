@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 * {
   margin: 0;
   padding: 0;
@@ -190,6 +191,61 @@ nav {
 .environemnt-section img:hover {
   transform: scale(1.05);
 }
+
+/* Gallery Section */
+.gallery-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-gap: 20px; /* Spacing between images */
+  justify-items: center;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+
+
+
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
