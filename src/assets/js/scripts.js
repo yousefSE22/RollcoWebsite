@@ -41,3 +41,55 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(section)
   })
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.gallery-item img')
+  const lightbox = document.getElementById('lightbox')
+  const lightboxImage = document.getElementById('lightbox-image')
+  const closeBtn = document.querySelector('.close')
+  const prevBtn = document.querySelector('.prev')
+  const nextBtn = document.querySelector('.next')
+  let currentIndex = 0
+
+  // Open the lightbox when an image is clicked
+  images.forEach((image, index) => {
+    image.addEventListener('click', () => {
+      lightbox.style.display = 'block'
+      currentIndex = index
+      showImage(currentIndex)
+    })
+  })
+
+  // Function to display the image based on the current index
+  /**
+   *
+   * @param index
+   */
+  function showImage (index) {
+    lightboxImage.src = images[index].src
+  }
+
+  // Close the lightbox
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none'
+  })
+
+  // Show previous image
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length
+    showImage(currentIndex)
+  })
+
+  // Show next image
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length
+    showImage(currentIndex)
+  })
+
+  // Close lightbox by clicking outside of the image
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none'
+    }
+  })
+})
