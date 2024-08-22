@@ -25,6 +25,7 @@ header {
   z-index: 1000;
 }
 
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -188,10 +189,21 @@ h2 {
 .about-section .Aboutclass p,
 .environemnt-section .envsec p {
   flex: 1 1 45%;
-  line-height: 1.8;
+  line-height: 1.6;
   max-width: 600px;
   margin: 0;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Subtle gradient background */
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1), -8px -8px 20px rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
 }
+
+
 
 .about-section img:hover,
 .environemnt-section img:hover {
