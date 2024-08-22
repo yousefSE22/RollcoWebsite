@@ -118,15 +118,20 @@ nav {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  
 }
 
 .service-box {
-  background: #f4f4f4;
+  color: #ffffff;
   padding: 20px;
   width: 300px;
   margin: 20px;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  
 }
 
 .service-box:hover {
@@ -143,15 +148,24 @@ nav {
   flex-wrap: wrap;
   gap: 40px;
   text-align: left;
-  background-color: whitesmoke;
+  background-color: white;
+
 }
 
-.about-section img,
+.about-section img{
+  flex: 1 1 45%;
+  max-width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
 .environemnt-section img {
   flex: 1 1 45%;
   max-width: 100%;
   border-radius: 20px;
   transition: transform 0.3s ease;
+  margin: 20px;
+  
 }
 
 .about-section .Aboutclass,
